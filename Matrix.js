@@ -9,11 +9,19 @@ class Matrix {
       let arr = []
 
       for (let j = 0; j < columns; j++) {
-        arr.push(1)
+        arr.push(0)
       }
 
       this.data.push(arr)
     }
+  }
+
+  print() {
+    console.table(this.data)
+  }
+
+  randomize() {
+    this.map(() => Math.random() * 2 - 1)
   }
 
   map(callback) {
