@@ -33,6 +33,23 @@ class Matrix {
 
     return result
   }
+
+  static multiply(a, b) {
+    const result = new Matrix(a.rows, b.columns)
+
+    result.map((number, i, j) => {
+      let sum = 0
+      for (let k = 0; k < a.columns; k++) {
+        let elem1 = a.data[i][k]
+        let elem2 = b.data[k][j]
+
+        sum += elem1 * elem2
+      }
+      return sum
+    })
+
+    return result
+  }
 }
 
 module.exports = Matrix
