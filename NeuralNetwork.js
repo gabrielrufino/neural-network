@@ -1,5 +1,9 @@
 const Matrix = require('./Matrix')
 
+function sigmoid(x) {
+  return 1/(1 + Math.exp(-x))
+}
+
 class NeuralNetwork {
   constructor(inputNeurons, hiddenNeurons, outputNeurons) {
     this.inputNeurons  = inputNeurons
@@ -31,6 +35,19 @@ class NeuralNetwork {
 
     this.weightInputHidden.print()
     this.weightHiddenOutput.print()
+  }
+
+  feedforward(input) {
+    input = Matrix.arrayToMatrix(input)
+    let hidden = Matrix.multiply(this.weightInputHidden, input)
+    hidden = Matrix.add(hidden, this.biasInputHidden)
+    hidden.map(sigmoid)
+    
+    let output = Matrix.multiply(this.weightHiddenOutput, hidden)
+    output = Matrix.add(output, this.biasHiddenOutput)
+    output.map(sigmoid)
+
+    output.print()
   }
 }
 

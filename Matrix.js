@@ -34,6 +34,26 @@ class Matrix {
     return this
   }
 
+  static map(a, callback) {
+    const matrix = new Matrix(a.rows, a.columns)
+
+    matrix.data = matrix.data.map((row, i) =>
+      row.map((number, j) =>
+        callback(number, i, j)
+      )
+    )
+
+    return matrix
+  }
+
+  static arrayToMatrix(array) {
+    const matrix = new Matrix(array.length, 1)
+
+    matrix.map((_, i, __) => array[i])
+
+    return matrix
+  }
+
   static add(a, b) {
     const result = new Matrix(a.rows, b.columns)
 
