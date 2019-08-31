@@ -1,0 +1,19 @@
+{
+  "name": "neural-network",
+  "version": "1.0.0",
+  "description": "Uma breve rede neural",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielrufino/neural-network.git"
+  },
+  "author": "Gabriel Rufino <contato@gabrielrufino.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrielrufino/neural-network/issues"
+  },
+  "homepage": "https://github.com/gabrielrufino/neural-network#readme"
+}
