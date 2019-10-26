@@ -3,17 +3,7 @@ class Matrix {
     this.rows = rows
     this.columns = columns
 
-    this.data = []
-
-    for (let i = 0; i < rows; i++) {
-      let arr = []
-
-      for (let j = 0; j < columns; j++) {
-        arr.push(0)
-      }
-
-      this.data.push(arr)
-    }
+    this.data = Array(rows).fill(Array(columns).fill(0))
   }
 
   print() {
