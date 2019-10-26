@@ -1,8 +1,5 @@
-const Matrix = require('./Matrix')
-
-function sigmoid(x) {
-  return 1/(1 + Math.exp(-x))
-}
+const Matrix      = require('./Matrix')
+const { sigmoid } = require('./ActivationFunction')
 
 class NeuralNetwork {
   constructor(inputNeurons, hiddenNeurons, outputNeurons) {
