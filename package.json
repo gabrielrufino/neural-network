@@ -1,5 +1,6 @@
 {
   "name": "neural-network",
+  "private": true,
   "version": "1.0.0",
   "description": "Uma breve rede neural",
   "main": "index.js",
